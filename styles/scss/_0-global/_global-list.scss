@@ -9,6 +9,10 @@
     @include flexbox($alignItems: center);
     gap: 4px;
   }
+
+  @media (max-width: 719px) {
+    font-size: 12px;
+  }
 }
 
 .global-list-status--expected {

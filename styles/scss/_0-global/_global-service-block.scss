@@ -17,6 +17,11 @@
     color: var(---dark-gray, #333);
     font-weight: 400;
     user-select: none;
+
+    @media (max-width: 719px) {
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
   .gen-tab__add-services-block {
@@ -40,6 +45,14 @@
       );
     }
 
+    @media (max-width: 719px) {
+      width: min(95%, var(---width, 1366px));
+
+      font-size: 14px;
+      font-weight: 400;
+      height: unset;
+    }
+
     &:not(:last-child) {
       padding-bottom: 10px;
     }
@@ -61,6 +74,11 @@
       padding: 0;
       /* pop-up_shadow */
       box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.16);
+
+      @media (max-width: 719px) {
+        position: unset;
+        width: unset;
+      }
 
       li {
         @include flexbox(
@@ -115,6 +133,12 @@
           color: var(--colors-gray-700, #2f2c2f);
           font-size: 14px;
           font-weight: 500;
+
+          @media (max-width: 719px) {
+            .gen-tab__add-services-li-price {
+              text-wrap: nowrap;
+            }
+          }
         }
       }
     }
@@ -124,6 +148,10 @@
       &.active {
         .gen-tab__add-services-text {
           border: 2px solid var(--colors-gray-200, #e5e4e2) !important;
+
+          @media (max-width: 719px) {
+            border: none !important;
+          }
         }
       }
       .gen-tab__add-services-text {
@@ -136,6 +164,16 @@
           content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M11.5007 14.4993L16 19.1005L20.4993 14.4993" stroke="%232F2C2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
           width: 32px;
           height: 32px;
+        }
+
+        @media (max-width: 719px) {
+          &,
+          &:hover {
+            border: none !important;
+          }
+          &::after {
+            display: none;
+          }
         }
       }
     }

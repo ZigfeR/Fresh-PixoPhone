@@ -2,6 +2,15 @@
   @include flexbox($justify: center, $alignItems: flex-start, $self: stretch);
 
   user-select: none;
+
+  margin-bottom: -32px;
+
+  @media (max-width: 719px) {
+    .breadcrumbs-content {
+      width: min(95%, var(---width, 1366px));
+    }
+  }
+
   .breadcrumbs {
     @include flexbox($alignItems: center);
 
@@ -9,11 +18,24 @@
     padding: 0 24px;
     flex-shrink: 0;
 
+    @media (max-width: 719px) {
+      overflow-x: auto;
+      scrollbar-width: none;
+      height: 40px;
+    }
+
     .breadcrumbs__item {
       @include flexbox($justify: center, $alignItems: center);
 
       color: var(--colors-gray-400, #929292);
       font-size: 12px;
+
+      @media (max-width: 719px) {
+        span {
+          width: 100%;
+          white-space: nowrap;
+        }
+      }
 
       &:last-child {
         color: var(--colors-gray-300, #c0c0c0);

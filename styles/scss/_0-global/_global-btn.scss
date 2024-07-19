@@ -132,6 +132,11 @@
   .gen-tab__add-services-price {
     @include flexbox($alignItems: baseline, $justify: flex-end);
     width: 80px;
+
+    @media (max-width: 719px) {
+      width: 60px;
+      font-weight: 500;
+    }
   }
 }
 //Квадратная кнопка добавить
@@ -156,6 +161,7 @@
       height: 16px;
     }
   }
+
   &.success {
     background: var(--colors-green-200, #dbf6e2);
 
@@ -198,10 +204,12 @@
 
     font-weight: 500;
     cursor: pointer;
+    gap: 8px;
 
     &:hover {
       background: var(--colors-green-600, #25863f);
     }
+
     &::before {
       // SVG COLOR var(--colors-white: #fff;);
       content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L18.7457 4.92374C18.8767 4.30211 18.4025 3.71743 17.7672 3.71743H8.09091" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="white"/><circle cx="15.475" cy="15.225" r="1.35" fill="white"/></svg>');
@@ -210,8 +218,9 @@
       // margin: auto 0;
       // margin-right: 8px;
       // margin-bottom: 17px;
-      margin: auto 8px 17px 0;
+      margin: auto 0 17px 0;
     }
+
     &:hover::before {
       // SVG COLOR var(--colors-white: #fff;);
       content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L19 3.71743" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="white"/><circle cx="15.475" cy="15.225" r="1.35" fill="white"/><path d="M11.5 3L11.5 8" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M9 5.5L14 5.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
@@ -233,7 +242,6 @@
 .global-button-credit {
   @include flexbox();
 
-  display: flex;
   flex: 1 0 0;
 
   button {
@@ -244,6 +252,31 @@
     cursor: pointer;
 
     border: none;
+    border-radius: 8px;
+    background: var(--colors-green-100, #e9f9e9);
+
+    color: var(--colors-green-400, #62b278);
+    text-align: center;
+
+    &:hover {
+      border: 2px solid var(--colors-green-500-primary, #2ea84f);
+      background: var(--colors-white, #fff);
+    }
+  }
+}
+//Прямоугольная кнопка Изменить товар
+.global-change-product-btn {
+  @include flexbox();
+  width: 100%;
+
+  a {
+    @include flexbox($justify: center, $alignItems: center);
+    width: 100%;
+    height: 48px;
+    padding: 0px 24px;
+    cursor: pointer;
+
+    border: 2px solid var(--colors-green-100, #e9f9e9);
     border-radius: 8px;
     background: var(--colors-green-100, #e9f9e9);
 
@@ -370,6 +403,60 @@
   }
 }
 
+//Прямоугольная кнопка бу предложений
+.global-button-used {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border-radius: var(---radius-min, 8px);
+    background: var(--colors-blue-500, #318ce7);
+    border: none;
+    position: relative;
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none"><path d="M9 1H23.5C27.0899 1 30 3.91015 30 7.5V22" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M1.75 8.75C1.75 6.54086 3.54086 4.75 5.75 4.75H22.25C24.4591 4.75 26.25 6.54086 26.25 8.75V25.25C26.25 27.4591 24.4591 29.25 22.25 29.25H5.75C3.54086 29.25 1.75 27.4591 1.75 25.25V8.75Z" fill="%23318CE7"/><path d="M5.75 5.75H22.25V3.75H5.75V5.75ZM25.25 8.75V25.25H27.25V8.75H25.25ZM22.25 28.25H5.75V30.25H22.25V28.25ZM2.75 25.25V8.75H0.75V25.25H2.75ZM5.75 28.25C4.09315 28.25 2.75 26.9069 2.75 25.25H0.75C0.75 28.0114 2.98858 30.25 5.75 30.25V28.25ZM25.25 25.25C25.25 26.9069 23.9069 28.25 22.25 28.25V30.25C25.0114 30.25 27.25 28.0114 27.25 25.25H25.25ZM22.25 5.75C23.9069 5.75 25.25 7.09315 25.25 8.75H27.25C27.25 5.98858 25.0114 3.75 22.25 3.75V5.75ZM5.75 3.75C2.98858 3.75 0.75 5.98858 0.75 8.75H2.75C2.75 7.09315 4.09315 5.75 5.75 5.75V3.75Z" fill="white"/></svg>');
+      width: 28.25px;
+      height: 28.25px;
+    }
+
+    span {
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      color: var(--colors-white, #fff);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  &.general {
+    button {
+      background: unset;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+
+      &::before {
+        content: url('data:image/svg+xml;utf8,<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="35" height="35" fill="%23909090"/><rect width="393" height="9668.5" transform="translate(-56 -1347)" fill="%23F7F7F7"/><rect x="-44" y="-24.5" width="369" height="220" rx="24" fill="white"/><path id="Rectangle 122" d="M9.28516 1.21423H25.8566C29.9593 1.21423 33.2852 4.54012 33.2852 8.6428V25.2142" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><rect id="Rectangle 121" x="1" y="5.5" width="28" height="28" rx="4.57143" stroke="%2362A8ED" stroke-width="2"/></svg>');
+        width: 32.285px;
+        height: 32.286px;
+      }
+
+      span {
+        color: var(--colors-blue-400, #62a8ed);
+        font-size: 16px;
+        top: 11px;
+        left: 6px;
+      }
+    }
+  }
+}
 //Прямоугольная кнопка Оповестить
 .global-button-notify {
   button {
@@ -436,6 +523,51 @@
       background: var(--colors-green-600, #25863f);
     }
   }
+
+  &.disable {
+    button {
+      background: var(--colors-gray-100, #f7f7f7);
+
+      color: var(--colors-gray-300, #c0c0c0);
+      cursor: inherit;
+
+      &:hover {
+        background: var(--colors-gray-100, #f7f7f7);
+      }
+    }
+  }
+}
+
+//Кнопка показать все содержимое
+.global-all-view-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  button {
+    color: var(--colors-gray-400, #929292);
+    text-align: justify;
+    display: flex;
+    height: 32px;
+    padding: 1px 16px 0px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 24px;
+    background: var(--colors-gray-100, #f7f7f7);
+    border: none;
+
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 6.5L8 9.5L11 6.5" stroke="%23929292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .global-button-send {
@@ -483,7 +615,8 @@
   position: fixed;
   bottom: 32px;
   right: 32px;
-  display: none;
+  right: -52px;
+  display: inline-flex;
 
   padding: 13px 12px 11px 12px;
   align-items: flex-start;
@@ -493,6 +626,18 @@
 
   border-radius: 32px;
   background: var(--colors-green-500-primary, #2ea84f);
+  transition: right 0.5s ease;
+
+  @media (max-width: 719px) {
+    bottom: 136px;
+  }
+
+  &.visible {
+    right: 32px;
+  }
+  &.mobile {
+    right: -52px;
+  }
 
   &:hover {
     background: var(--colors-green-600, #25863f);
@@ -562,6 +707,10 @@
 
 .reviews-block-rating-value {
   display: block;
+
+  &.mobile {
+    display: none;
+  }
 }
 
 //Закрытие попап
