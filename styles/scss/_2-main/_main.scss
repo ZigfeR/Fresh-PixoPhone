@@ -5,16 +5,87 @@
 
   padding-bottom: 32px;
 
-  @import "../_2-main/_1-tabs/1-tabs";
-  @import "../_2-main/_2-general-tab/2-general-tab";
-  @import "../_2-main/_3-block-on-sale-soon/3-block-on-sale-soon";
-  @import "../_2-main/_4-description/4-description";
-  @import "../_2-main/_5-recently-viewed/5-recently-viewed";
-  @import "../_2-main/_6-novelty/6-novelty";
-  @import "../_2-main/_7-information-tab/7-information-tab";
-  @import "../_2-main/_8-cheaper-together/8-cheaper-together";
-  @import "../_2-main/_9-acces-tab/9-acces-tab";
-  @import "../_2-main/_10-service-tab/10-service-tab";
-  @import "../_2-main/_11-used-sentences/11-used-sentences";
-  @import "../_2-main/_12-offers-tab/12-offers-tab";
+  @import "../_2-main/3-breadcrumbs";
+  @import "../_2-main/popular-questions";
+  @import "../_2-main/_13-mobile-nav/13-mobile-nav";
+  @import "../_2-main/_2-personal-area/2-personal-area";
+
+  @media (max-width: 719px) {
+    gap: 12px;
+  }
+
+  .tabs__link-menu__bonus {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+
+    border-radius: 16px;
+    background: var(--colors-green-100, #e9f9e9);
+    width: 255px;
+
+    @media (max-width: 719px) {
+      padding: 12px 16px;
+      width: unset;
+    }
+
+    span {
+      width: 100%;
+
+      font-weight: 500;
+
+      @media (max-width: 719px) {
+        font-weight: 400;
+      }
+    }
+
+    .left {
+      display: flex;
+      padding-top: 4px;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex: 1 0 0;
+
+      @media (max-width: 719px) {
+        gap: 8px;
+      }
+
+      .top {
+        color: var(--colors-green-400, #62b278);
+        font-size: 16px;
+        font-weight: 500;
+
+        @media (max-width: 719px) {
+          font-size: 12px;
+        }
+
+        &.top-login {
+          display: none;
+        }
+      }
+
+      .bottom {
+        color: var(--colors-green-400, #62b278);
+        font-size: 12px;
+        font-weight: 400;
+
+        @media (max-width: 719px) {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .price-bonus {
+      width: unset;
+      color: var(--colors-green-400, #62b278);
+      font-size: 48px;
+
+      @media (max-width: 719px) {
+        font-size: 32px;
+      }
+    }
+  }
 }
