@@ -50,10 +50,16 @@
 
   &:hover::after {
     display: flex;
+    @media (max-width: 719px) {
+      display: none;
+    }
   }
 
   &:hover::before {
     display: block;
+    @media (max-width: 719px) {
+      display: none;
+    }
   }
 
   .gen-tab__info-price-cashback-span {

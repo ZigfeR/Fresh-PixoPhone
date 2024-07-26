@@ -55,6 +55,152 @@
   }
 }
 
+//Кнопка входа\выхода
+.global__authorized-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  cursor: pointer;
+  border: none;
+
+  border-radius: 8px;
+  background: transparent;
+
+  span {
+    font-size: 12px;
+  }
+
+  .left-home__authorized-login {
+    color: var(--colors-green-400, #62b278);
+  }
+
+  .left-home__authorized-logout {
+    color: var(--colors-red-300, #fa8072);
+  }
+}
+
+.global-button-shared,
+.global-button-date {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+
+  border-radius: 48px;
+  background: var(--colors-blue-100, #e9f5ff);
+  border: none;
+
+  &:hover {
+    background: var(--colors-blue-500, #318ce7);
+  }
+}
+
+.global-button-shared {
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13.991 13.3652C13.1103 13.3652 12.3167 13.7456 11.766 14.3506L6.81215 11.2825C6.94816 10.9348 7.01789 10.5648 7.01774 10.1915C7.01791 9.81817 6.94818 9.44812 6.81215 9.10046L11.766 6.03219C12.3167 6.63725 13.1103 7.01777 13.991 7.01777C15.6502 7.01777 17 5.66798 17 4.00881C17 2.34964 15.6502 1 13.991 1C12.3319 1 10.9821 2.34978 10.9821 4.00895C10.982 4.38225 11.0518 4.75227 11.1877 5.09994L6.23402 8.1681C5.68325 7.56304 4.88973 7.18253 4.00896 7.18253C2.34979 7.18253 1 8.53246 1 10.1915C1 11.8506 2.34979 13.2004 4.00896 13.2004C4.88969 13.2004 5.68329 12.8201 6.23402 12.2149L11.1877 15.283C11.0518 15.6307 10.982 16.0008 10.9821 16.3742C10.9821 18.0332 12.3319 19.383 13.991 19.383C15.6502 19.383 17 18.0332 17 16.3742C17 14.715 15.6502 13.3652 13.991 13.3652ZM12.0793 4.00895C12.0793 2.95481 12.9369 2.0972 13.991 2.0972C15.0452 2.0972 15.9028 2.95481 15.9028 4.00895C15.9028 5.0631 15.0452 5.92071 13.991 5.92071C12.9369 5.92071 12.0793 5.06307 12.0793 4.00895ZM4.00896 12.1032C2.95467 12.1032 2.09706 11.2456 2.09706 10.1915C2.09706 9.13737 2.95467 8.27973 4.00896 8.27973C5.06311 8.27973 5.92058 9.13737 5.92058 10.1915C5.92058 11.2456 5.06308 12.1032 4.00896 12.1032ZM12.0793 16.3741C12.0793 15.3199 12.9369 14.4623 13.991 14.4623C15.0452 14.4623 15.9028 15.3199 15.9028 16.374C15.9028 17.4282 15.0452 18.2858 13.991 18.2858C12.9369 18.2858 12.0793 17.4282 12.0793 16.374V16.3741Z" fill="%2362A8ED" stroke="%2362A8ED" stroke-width="0.5"/></svg>');
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13.991 13.3652C13.1103 13.3652 12.3167 13.7456 11.766 14.3506L6.81215 11.2825C6.94816 10.9348 7.01789 10.5648 7.01774 10.1915C7.01791 9.81817 6.94818 9.44812 6.81215 9.10046L11.766 6.03219C12.3167 6.63725 13.1103 7.01777 13.991 7.01777C15.6502 7.01777 17 5.66798 17 4.00881C17 2.34964 15.6502 1 13.991 1C12.3319 1 10.9821 2.34978 10.9821 4.00895C10.982 4.38225 11.0518 4.75227 11.1877 5.09994L6.23402 8.1681C5.68325 7.56304 4.88973 7.18253 4.00896 7.18253C2.34979 7.18253 1 8.53246 1 10.1915C1 11.8506 2.34979 13.2004 4.00896 13.2004C4.88969 13.2004 5.68329 12.8201 6.23402 12.2149L11.1877 15.283C11.0518 15.6307 10.982 16.0008 10.9821 16.3742C10.9821 18.0332 12.3319 19.383 13.991 19.383C15.6502 19.383 17 18.0332 17 16.3742C17 14.715 15.6502 13.3652 13.991 13.3652ZM12.0793 4.00895C12.0793 2.95481 12.9369 2.0972 13.991 2.0972C15.0452 2.0972 15.9028 2.95481 15.9028 4.00895C15.9028 5.0631 15.0452 5.92071 13.991 5.92071C12.9369 5.92071 12.0793 5.06307 12.0793 4.00895ZM4.00896 12.1032C2.95467 12.1032 2.09706 11.2456 2.09706 10.1915C2.09706 9.13737 2.95467 8.27973 4.00896 8.27973C5.06311 8.27973 5.92058 9.13737 5.92058 10.1915C5.92058 11.2456 5.06308 12.1032 4.00896 12.1032ZM12.0793 16.3741C12.0793 15.3199 12.9369 14.4623 13.991 14.4623C15.0452 14.4623 15.9028 15.3199 15.9028 16.374C15.9028 17.4282 15.0452 18.2858 13.991 18.2858C12.9369 18.2858 12.0793 17.4282 12.0793 16.374V16.3741Z" fill="white" stroke="white" stroke-width="0.5"/></svg>');
+    }
+  }
+
+  @media (max-width: 719px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.global-button-date {
+  position: relative;
+
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 7.5C7.44772 7.5 7 7.05228 7 6.5H5.5C4.94772 6.5 4.5 6.94772 4.5 7.5V8.5L19.5 8.5V7.5C19.5 6.94772 19.0523 6.5 18.5 6.5H17C17 7.05228 16.5523 7.5 16 7.5C15.4477 7.5 15 7.05228 15 6.5H9C9 7.05228 8.55228 7.5 8 7.5ZM17 4.5C17 3.94772 16.5523 3.5 16 3.5C15.4477 3.5 15 3.94772 15 4.5H9C9 3.94772 8.55228 3.5 8 3.5C7.44772 3.5 7 3.94772 7 4.5H5.5C3.84315 4.5 2.5 5.84315 2.5 7.5V17.5C2.5 19.1569 3.84315 20.5 5.5 20.5H18.5C20.1569 20.5 21.5 19.1569 21.5 17.5V7.5C21.5 5.84315 20.1569 4.5 18.5 4.5H17ZM4.5 10.5V17.5C4.5 18.0523 4.94772 18.5 5.5 18.5H18.5C19.0523 18.5 19.5 18.0523 19.5 17.5V10.5L4.5 10.5Z" fill="%2362A8ED"/></svg>');
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover {
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 7.5C7.44772 7.5 7 7.05228 7 6.5H5.5C4.94772 6.5 4.5 6.94772 4.5 7.5V8.5L19.5 8.5V7.5C19.5 6.94772 19.0523 6.5 18.5 6.5H17C17 7.05228 16.5523 7.5 16 7.5C15.4477 7.5 15 7.05228 15 6.5H9C9 7.05228 8.55228 7.5 8 7.5ZM17 4.5C17 3.94772 16.5523 3.5 16 3.5C15.4477 3.5 15 3.94772 15 4.5H9C9 3.94772 8.55228 3.5 8 3.5C7.44772 3.5 7 3.94772 7 4.5H5.5C3.84315 4.5 2.5 5.84315 2.5 7.5V17.5C2.5 19.1569 3.84315 20.5 5.5 20.5H18.5C20.1569 20.5 21.5 19.1569 21.5 17.5V7.5C21.5 5.84315 20.1569 4.5 18.5 4.5H17ZM4.5 10.5V17.5C4.5 18.0523 4.94772 18.5 5.5 18.5H18.5C19.0523 18.5 19.5 18.0523 19.5 17.5V10.5L4.5 10.5Z" fill="white"/></svg>');
+    }
+  }
+
+  &.active {
+    &::before {
+      position: absolute;
+      right: 2px;
+      top: -6px;
+
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none"><circle cx="4" cy="4" r="3.5" fill="%23318CE7" stroke="white"/></svg>');
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.global-button-edit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  border-radius: 16px;
+  border: none;
+  background: transparent;
+
+  color: var(--colors-green-400, #62b278);
+
+  font-size: 14px;
+
+  &::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M9.41098 4.0056L2.80812 10.6156C2.77487 10.649 2.75117 10.6906 2.7395 10.7363L2.00761 13.6768C1.99685 13.7205 1.99751 13.7661 2.00953 13.8094C2.02155 13.8527 2.04452 13.8922 2.07623 13.924C2.12494 13.9726 2.19088 13.9999 2.25964 14C2.28085 14 2.30199 13.9974 2.32256 13.9922L5.26013 13.2595C5.3058 13.248 5.3475 13.2243 5.38074 13.1909L11.9842 6.58136L9.41098 4.0056ZM13.62 3.10434L12.885 2.36862C12.3938 1.87688 11.5376 1.87737 11.0469 2.36862L10.1466 3.26988L12.7197 5.84555L13.62 4.94431C13.8654 4.69878 14.0006 4.37196 14.0006 4.02438C14.0006 3.6768 13.8654 3.34998 13.62 3.10434Z" fill="%2362B378"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 13.25C6.5 12.8358 6.83579 12.5 7.25 12.5H13.25C13.6642 12.5 14 12.8358 14 13.25C14 13.6642 13.6642 14 13.25 14H7.25C6.83579 14 6.5 13.6642 6.5 13.25Z" fill="%2362B378"/></svg>');
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    color: var(--colors-green-600, #25863f);
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M9.41098 4.0056L2.80812 10.6156C2.77487 10.649 2.75117 10.6906 2.7395 10.7363L2.00761 13.6768C1.99685 13.7205 1.99751 13.7661 2.00953 13.8094C2.02155 13.8527 2.04452 13.8922 2.07623 13.924C2.12494 13.9726 2.19088 13.9999 2.25964 14C2.28085 14 2.30199 13.9974 2.32256 13.9922L5.26013 13.2595C5.3058 13.248 5.3475 13.2243 5.38074 13.1909L11.9842 6.58136L9.41098 4.0056ZM13.62 3.10434L12.885 2.36862C12.3938 1.87688 11.5376 1.87737 11.0469 2.36862L10.1466 3.26988L12.7197 5.84555L13.62 4.94431C13.8654 4.69878 14.0006 4.37196 14.0006 4.02438C14.0006 3.6768 13.8654 3.34998 13.62 3.10434Z" fill="%2325863f"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 13.25C6.5 12.8358 6.83579 12.5 7.25 12.5H13.25C13.6642 12.5 14 12.8358 14 13.25C14 13.6642 13.6642 14 13.25 14H7.25C6.83579 14 6.5 13.6642 6.5 13.25Z" fill="%2325863f"/></svg>');
+    }
+  }
+}
+
+.global-btn-trash {
+  background: unset;
+  border: unset;
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5V4H2V5H3ZM15 5H16V4H15V5ZM3 6H15V4H3V6ZM14 5V15H16V5H14ZM13 16H5V18H13V16ZM4 15V5H2V15H4ZM5 16C4.44772 16 4 15.5523 4 15H2C2 16.6569 3.34315 18 5 18V16ZM14 15C14 15.5523 13.5523 16 13 16V18C14.6569 18 16 16.6569 16 15H14Z" fill="%23C0C0C0"/><path d="M1 5H17" stroke="%23C0C0C0" stroke-width="2" stroke-linecap="round"/><path d="M7 9V13" stroke="%23C0C0C0" stroke-width="2" stroke-linecap="round"/><path d="M11 9V13" stroke="%23C0C0C0" stroke-width="2" stroke-linecap="round"/><path d="M13 5V6H14V5H13ZM5 5H4V6H5V5ZM7 2H11V0H7V2ZM12 3V5H14V3H12ZM13 4H5V6H13V4ZM6 5V3H4V5H6ZM11 2C11.5523 2 12 2.44772 12 3H14C14 1.34315 12.6569 0 11 0V2ZM7 0C5.34315 0 4 1.34315 4 3H6C6 2.44772 6.44772 2 7 2V0Z" fill="%23C0C0C0"/></svg>');
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5V4H2V5H3ZM15 5H16V4H15V5ZM3 6H15V4H3V6ZM14 5V15H16V5H14ZM13 16H5V18H13V16ZM4 15V5H2V15H4ZM5 16C4.44772 16 4 15.5523 4 15H2C2 16.6569 3.34315 18 5 18V16ZM14 15C14 15.5523 13.5523 16 13 16V18C14.6569 18 16 16.6569 16 15H14Z" fill="%23fa8072"/><path d="M1 5H17" stroke="%23fa8072" stroke-width="2" stroke-linecap="round"/><path d="M7 9V13" stroke="%23fa8072" stroke-width="2" stroke-linecap="round"/><path d="M11 9V13" stroke="%23fa8072" stroke-width="2" stroke-linecap="round"/><path d="M13 5V6H14V5H13ZM5 5H4V6H5V5ZM7 2H11V0H7V2ZM12 3V5H14V3H12ZM13 4H5V6H13V4ZM6 5V3H4V5H6ZM11 2C11.5523 2 12 2.44772 12 3H14C14 1.34315 12.6569 0 11 0V2ZM7 0C5.34315 0 4 1.34315 4 3H6C6 2.44772 6.44772 2 7 2V0Z" fill="%23fa8072"/></svg>');
+    }
+  }
+}
+
 //Горизонтальный переключатель
 .global-horizontal-switch {
   @include flexbox($alignItems: center, $self: stretch);
@@ -132,6 +278,11 @@
   .gen-tab__add-services-price {
     @include flexbox($alignItems: baseline, $justify: flex-end);
     width: 80px;
+
+    @media (max-width: 719px) {
+      width: 60px;
+      font-weight: 500;
+    }
   }
 }
 //Квадратная кнопка добавить
@@ -156,6 +307,7 @@
       height: 16px;
     }
   }
+
   &.success {
     background: var(--colors-green-200, #dbf6e2);
 
@@ -198,20 +350,23 @@
 
     font-weight: 500;
     cursor: pointer;
+    gap: 8px;
 
     &:hover {
       background: var(--colors-green-600, #25863f);
     }
+
     &::before {
       // SVG COLOR var(--colors-white: #fff;);
       content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L18.7457 4.92374C18.8767 4.30211 18.4025 3.71743 17.7672 3.71743H8.09091" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="white"/><circle cx="15.475" cy="15.225" r="1.35" fill="white"/></svg>');
-      width: 18px;
+      // width: 18px;
       height: 15.075px;
       // margin: auto 0;
       // margin-right: 8px;
       // margin-bottom: 17px;
-      margin: auto 8px 17px 0;
+      margin: auto 0 17px 0;
     }
+
     &:hover::before {
       // SVG COLOR var(--colors-white: #fff;);
       content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" fill="none"><path d="M1 1.5H2.38653C2.82196 1.5 3.20734 1.78175 3.33942 2.19667L6.07235 10.7818C6.20443 11.1967 6.5898 11.4784 7.02523 11.4784H16.5525C17.0253 11.4784 17.4334 11.1474 17.531 10.6848L19 3.71743" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="7.6" cy="15.225" r="1.35" fill="white"/><circle cx="15.475" cy="15.225" r="1.35" fill="white"/><path d="M11.5 3L11.5 8" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M9 5.5L14 5.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
@@ -233,7 +388,6 @@
 .global-button-credit {
   @include flexbox();
 
-  display: flex;
   flex: 1 0 0;
 
   button {
@@ -244,6 +398,31 @@
     cursor: pointer;
 
     border: none;
+    border-radius: 8px;
+    background: var(--colors-green-100, #e9f9e9);
+
+    color: var(--colors-green-400, #62b278);
+    text-align: center;
+
+    &:hover {
+      border: 2px solid var(--colors-green-500-primary, #2ea84f);
+      background: var(--colors-white, #fff);
+    }
+  }
+}
+//Прямоугольная кнопка Изменить товар
+.global-change-product-btn {
+  @include flexbox();
+  width: 100%;
+
+  a {
+    @include flexbox($justify: center, $alignItems: center);
+    width: 100%;
+    height: 48px;
+    padding: 0px 24px;
+    cursor: pointer;
+
+    border: 2px solid var(--colors-green-100, #e9f9e9);
     border-radius: 8px;
     background: var(--colors-green-100, #e9f9e9);
 
@@ -370,6 +549,60 @@
   }
 }
 
+//Прямоугольная кнопка бу предложений
+.global-button-used {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: var(--colors-blue-500, #318ce7);
+    border: none;
+    position: relative;
+
+    &::before {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none"><path d="M9 1H23.5C27.0899 1 30 3.91015 30 7.5V22" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M1.75 8.75C1.75 6.54086 3.54086 4.75 5.75 4.75H22.25C24.4591 4.75 26.25 6.54086 26.25 8.75V25.25C26.25 27.4591 24.4591 29.25 22.25 29.25H5.75C3.54086 29.25 1.75 27.4591 1.75 25.25V8.75Z" fill="%23318CE7"/><path d="M5.75 5.75H22.25V3.75H5.75V5.75ZM25.25 8.75V25.25H27.25V8.75H25.25ZM22.25 28.25H5.75V30.25H22.25V28.25ZM2.75 25.25V8.75H0.75V25.25H2.75ZM5.75 28.25C4.09315 28.25 2.75 26.9069 2.75 25.25H0.75C0.75 28.0114 2.98858 30.25 5.75 30.25V28.25ZM25.25 25.25C25.25 26.9069 23.9069 28.25 22.25 28.25V30.25C25.0114 30.25 27.25 28.0114 27.25 25.25H25.25ZM22.25 5.75C23.9069 5.75 25.25 7.09315 25.25 8.75H27.25C27.25 5.98858 25.0114 3.75 22.25 3.75V5.75ZM5.75 3.75C2.98858 3.75 0.75 5.98858 0.75 8.75H2.75C2.75 7.09315 4.09315 5.75 5.75 5.75V3.75Z" fill="white"/></svg>');
+      width: 28.25px;
+      height: 28.25px;
+    }
+
+    span {
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      color: var(--colors-white, #fff);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  &.general {
+    button {
+      background: unset;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+
+      &::before {
+        content: url('data:image/svg+xml;utf8,<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="35" height="35" fill="%23909090"/><rect width="393" height="9668.5" transform="translate(-56 -1347)" fill="%23F7F7F7"/><rect x="-44" y="-24.5" width="369" height="220" rx="24" fill="white"/><path id="Rectangle 122" d="M9.28516 1.21423H25.8566C29.9593 1.21423 33.2852 4.54012 33.2852 8.6428V25.2142" stroke="%2362A8ED" stroke-width="2" stroke-linecap="round"/><rect id="Rectangle 121" x="1" y="5.5" width="28" height="28" rx="4.57143" stroke="%2362A8ED" stroke-width="2"/></svg>');
+        width: 32.285px;
+        height: 32.286px;
+      }
+
+      span {
+        color: var(--colors-blue-400, #62a8ed);
+        font-size: 16px;
+        top: 11px;
+        left: 6px;
+      }
+    }
+  }
+}
 //Прямоугольная кнопка Оповестить
 .global-button-notify {
   button {
@@ -436,6 +669,52 @@
       background: var(--colors-green-600, #25863f);
     }
   }
+
+  &.disable {
+    button {
+      background: var(--colors-gray-100, #f7f7f7);
+
+      color: var(--colors-gray-300, #c0c0c0);
+      pointer-events: none;
+
+      &:hover {
+        background: var(--colors-gray-100, #f7f7f7);
+      }
+    }
+  }
+}
+
+//Кнопка показать все содержимое
+.global-all-view-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  button,
+  span {
+    color: var(--colors-gray-400, #929292);
+    text-align: justify;
+    display: flex;
+    height: 32px;
+    padding: 1px 16px 0px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 24px;
+    background: var(--colors-gray-100, #f7f7f7);
+    border: none;
+
+    &::after {
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M5 6.5L8 9.5L11 6.5" stroke="%23929292" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 
 .global-button-send {
@@ -483,7 +762,8 @@
   position: fixed;
   bottom: 32px;
   right: 32px;
-  display: none;
+  right: -52px;
+  display: inline-flex;
 
   padding: 13px 12px 11px 12px;
   align-items: flex-start;
@@ -493,6 +773,18 @@
 
   border-radius: 32px;
   background: var(--colors-green-500-primary, #2ea84f);
+  transition: right 0.5s ease;
+
+  @media (max-width: 719px) {
+    bottom: 136px;
+  }
+
+  &.visible {
+    right: 32px;
+  }
+  &.mobile {
+    right: -52px;
+  }
 
   &:hover {
     background: var(--colors-green-600, #25863f);
@@ -562,8 +854,35 @@
 
 .reviews-block-rating-value {
   display: block;
+
+  &.mobile {
+    display: none;
+  }
 }
 
+.global-button-user-login {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  color: var(--colors-gray-700, #2f2c2f);
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.global-button-user-to-login {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  color: var(--colors-green-400, #62b278);
+  text-align: center;
+
+  font-size: 12px;
+}
 //Закрытие попап
 .global-pop-up-close {
   display: flex;

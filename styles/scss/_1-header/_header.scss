@@ -9,7 +9,46 @@
     @import "../_1-header/1-header_top";
     @import "../_1-header/2-header_bottom";
     @import "../_1-header/2.1-header-menu";
-  }
+    @import "../_1-header/15-run-stroke";
 
-  @import "../_1-header/3-breadcrumbs";
+    .header_promo-mobile {
+      display: none;
+    }
+
+    @media (max-width: 719px) {
+      width: 99%;
+      .header_top {
+        display: none;
+      }
+
+      .header_promo-mobile {
+        display: block;
+        width: 100%;
+        height: 48px;
+        background: linear-gradient(90deg, #04060c, #6b1416);
+        img {
+          width: 100%;
+          object-fit: contain;
+          height: 48px;
+        }
+      }
+
+      .header_bottom {
+        .main_logo-bottom {
+          display: block !important;
+          width: 63.429px !important;
+          height: 48px !important;
+          margin-left: 6px !important;
+
+          background: url("/images/mobile-logo.png") 50% / contain no-repeat !important;
+        }
+
+        .header_bottom-catalog,
+        .language_switch,
+        .header-bottom-controls {
+          display: none !important;
+        }
+      }
+    }
+  }
 }
